@@ -10,6 +10,7 @@ This document outlines the steps taken to set up infrastructure with Terraform a
 1. We used Terraform to automate the deployment of three servers. Started out by creating the required files on terraform, then moved on to create the infrastructure
 
     ![](/img/01.create-files.png)
+    ![](/img/002.provider.png)
     ![](/img/02.infrastructures.png)
     ![](/img/03.infra.png)
 2. Next, we created the security groups (this was set to allow all traffic)
