@@ -1,11 +1,17 @@
 # Infrastructure Setup with Terraform and Ansible
 ## Overview
-This document outlines the steps taken to set up infrastructure with Terraform and configure Ansible for management. The setup includes:
+
+### This document outlines the steps taken to set up infrastructure with Terraform and configure Ansible for management. The setup is in two phases;
+
+### Firstly, using ansible adhoc commands to manage 2 different managed nodes running on different OS
+
+### Secondly, using ansible playbook to install and enable apache on 4 different servers running different OS 
 
 - Using Terraform to create three servers on AWS.
 - Configuring one server as the Ansible Control Node using userdata.
 - Configuring the other two servers as Ansible Managed Nodes.
-- Running some ansible modules.
+- Running some adhoc ansible modules.
+
 
 1. We used Terraform to automate the deployment of three servers. Started out by creating the required files on terraform, then moved on to create the infrastructure
 
