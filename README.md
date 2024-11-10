@@ -7,6 +7,7 @@
 
 ### Secondly, using ansible playbook to install and enable apache on 4 different servers running different OS 
 
+## First section: Ansible Adhoc command
 - Using Terraform to create three servers on AWS.
 - Configuring one server as the Ansible Control Node using userdata.
 - Configuring the other two servers as Ansible Managed Nodes.
@@ -60,3 +61,24 @@ Using Terraform, we deployed three servers: one as the Ansible control node and 
 
 
 
+## Second section: Using Ansible Playbook
+- Using Terraform to create three servers on AWS.
+- Configuring one server as the Ansible Control Node using userdata.
+- Configuring four other servers as Ansible Managed Nodes.
+- Writing a playbook to install apache on the four servers.
+
+1. From step 14 above, we updated the hosts file with the IP address and the users of the other two new servers.
+2. The authorized keys of the new servers were also updated with the public key of the key generated in step 9 above.
+3. we logged into the ansible server and created a yaml file called playbook 
+![](/img2/001.login.png)
+![](/img2/01.playbook.png)
+4. We ran the command ansible-playbook
+![](/img2/02playbook.png)
+5. We tested the page using the IP of each of the servers
+![](/img2/03.RH.png)
+![](/img2/04.centos.png)
+![](/img2/05.amazon.png)
+![](/img2/05.ubuntu.png)
+
+## Summary
+We deployed 5 servers using one of them as the control node and the other four as managed nodes. The four were of different Linux distribution. A playbook was written to manage them remotely through ansible and apache webserver was installed on them.
